@@ -5,8 +5,10 @@
 
     <!-- bean definitions here -->
 
-    <bean id="helloWorld" class="org.learn.HelloWorld">
+    <bean id="helloWorld" class="org.learn.HelloWorld"> </bean>
 
-    </bean>
+    <bean id="helloRobert" class="org.learn.HelloRobert"> </bean>
+
+<!--    <bean id="helloRobert2" class="org.learn.HelloRobert"> </bean> | If you mention multiple times it will create an object multiple times -->
 
 </beans>
