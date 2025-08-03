@@ -10,6 +10,11 @@ public class HelloWorld {
         System.out.println("HelloWorld- Constructor");
     }
 
+    public HelloWorld(int age) {
+        this.age = age;
+        System.out.println("HelloWorld from parameterized constructor");
+    }
+
     public int getAge() {
         return age;
     }

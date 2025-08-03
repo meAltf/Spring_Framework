@@ -6,7 +6,9 @@
     <!-- bean definitions here -->
 
     <bean id="helloWorld" class="org.learn.HelloWorld">
-        <property name="age" value="20"> </property>
+<!--        <property name="age" value="20"> </property>-->
+
+        <constructor-arg value="19"> </constructor-arg>
     </bean>
 
     <bean id="helloRobert" class="org.learn.HelloRobert"> </bean>
