@@ -6,11 +6,11 @@
     <!-- bean definitions here -->
 
     <bean id="helloWorld" class="org.learn.HelloWorld">
-        <property name="age" value="20"> </property>
-        <property name="salary" value="89000"> </property>
+<!--        <property name="age" value="20"> </property>-->
+<!--        <property name="salary" value="89000"> </property>-->
 
-<!--        <constructor-arg index="0" value="19"> </constructor-arg>-->
-<!--        <constructor-arg index="1" value="89000000" > </constructor-arg>-->
+        <constructor-arg index="0" value="19"> </constructor-arg>
+        <constructor-arg index="1" value="89000000" > </constructor-arg>
     </bean>
 
     <bean id="helloRobert" class="org.learn.HelloRobert"> </bean>
