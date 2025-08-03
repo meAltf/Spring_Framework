@@ -6,7 +6,11 @@
     <!-- bean definitions here -->
 
     <bean id="helloWorld" class="org.learn.HelloWorld">
-        <property name="helloRobert" ref="helloRobert1"> </property>
+
+<!--        <property name="helloRobert" ref="helloRobert1"> </property>-->
+
+        <constructor-arg ref="helloRobert1" />
+
 <!--        <property name="age" value="20"> </property>-->
 <!--        <property name="salary" value="89000"> </property>-->
 
