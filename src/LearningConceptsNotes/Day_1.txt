@@ -1,0 +1,37 @@
+* Spring Framework :
+- Spring is a lightweight, open-source framework for building enterprise-level Java applications.
+- Features provided by spring framework:
+    - Dependency Injection
+    - Aspect-Oriented Programming
+    - Transaction Management
+    - Integration with other frameworks (JPA, Hibernate, etc.)
+
+✅ Think of Spring as the "glue" that holds components together in an application.
+
+* Why Use Spring?
+- Reduces boilerplate code
+- Easy to test
+- Promotes loose coupling
+- Scalable & modular
+- Widely adopted (backbone of springBoot and spring cloud etc.)
+
+* Spring Core Module Overview :
+- BeanFactory | Basic container
+- ApplicationContext | Advanced container with more features
+- Dependency Injection | Injecting dependency automatically
+
+* Spring core Architecture diagram :
+- Application -> ApplicationContext(container) -> 1. [Bean Config(XML or Java) ] 2. [Spring Beans(Objects)]
+
+* Interview Q&A :
+1. What is the core container in Spring?
+- The core container in Spring is ApplicationContext.
+- It manages the lifecycle and configuration of application beans.
+
+2. What is a Bean in Spring?
+- A Bean in Spring is an object.
+- That object can be instantiated, assembled and managed by Spring Ioc container.
+
+3. What is the difference between BeanFactory and ApplicationContext?
+- ApplicationContext is a superset of BeanFactory means on top of BeanFactory ApplicationContext has built.
+- It contains more additional features like internationalization, event propagation, etc.
