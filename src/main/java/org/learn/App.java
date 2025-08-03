@@ -14,14 +14,15 @@ public class App
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springBean.xml");
 
         HelloWorld helloWorldObj = (HelloWorld) applicationContext.getBean("helloWorld");
+        helloWorldObj.build();
        // helloWorldObj.setAge(22);
-        System.out.println(helloWorldObj.getAge());
-        System.out.println(helloWorldObj.getSalary());
+       // System.out.println(helloWorldObj.getAge());
+       // System.out.println(helloWorldObj.getSalary());
         //helloWorldObj.build();
 
 
-        // HelloRobert helloRobertObj = (HelloRobert) applicationContext.getBean("helloRobert");
-        //helloRobertObj.compile();
+//         HelloRobert helloRobertObj = (HelloRobert) applicationContext.getBean("helloRobert");
+//         helloRobertObj.compile();
 
 
     }
