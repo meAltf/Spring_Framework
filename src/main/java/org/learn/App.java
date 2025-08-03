@@ -12,10 +12,16 @@ public class App
 
         /** Using a spring framework to create an object **/
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springBean.xml");
-        HelloWorld helloWorldObj = (HelloWorld) applicationContext.getBean("helloWorld");
-        HelloRobert helloRobertObj = (HelloRobert) applicationContext.getBean("helloRobert");
 
-        helloWorldObj.build();
-        helloRobertObj.compile();
+        HelloWorld helloWorldObj = (HelloWorld) applicationContext.getBean("helloWorld");
+        helloWorldObj.setAge(22);
+        System.out.println(helloWorldObj.getAge());
+        //helloWorldObj.build();
+
+
+        // HelloRobert helloRobertObj = (HelloRobert) applicationContext.getBean("helloRobert");
+        //helloRobertObj.compile();
+
+
     }
 }
