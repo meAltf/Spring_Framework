@@ -12,8 +12,8 @@ public class App
 
         /** Using a spring framework to create an object **/
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springBean.xml");
-        HelloWorld helloWorldObj = applicationContext.getBean(HelloWorld.class);
-        HelloRobert helloRobertObj = applicationContext.getBean(HelloRobert.class);
+        HelloWorld helloWorldObj = (HelloWorld) applicationContext.getBean("helloWorld");
+        HelloRobert helloRobertObj = (HelloRobert) applicationContext.getBean("helloRobert");
 
         helloWorldObj.build();
         helloRobertObj.compile();

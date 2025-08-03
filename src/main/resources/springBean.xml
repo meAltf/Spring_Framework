@@ -9,6 +9,7 @@
 
     <bean id="helloRobert" class="org.learn.HelloRobert"> </bean>
 
-<!--    <bean id="helloRobert2" class="org.learn.HelloRobert"> </bean> | If you mention multiple times it will create an object multiple times -->
+    <!-- If you mention multiple times, it will create an object multiple times -->
+<!--    <bean id="helloRobert2" class="org.learn.HelloRobert"> </bean>-->
 
 </beans>
