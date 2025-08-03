@@ -16,6 +16,7 @@ public class App
         HelloWorld helloWorldObj = (HelloWorld) applicationContext.getBean("helloWorld");
        // helloWorldObj.setAge(22);
         System.out.println(helloWorldObj.getAge());
+        System.out.println(helloWorldObj.getSalary());
         //helloWorldObj.build();
 
 
