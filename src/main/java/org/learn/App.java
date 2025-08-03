@@ -14,7 +14,7 @@ public class App
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springBean.xml");
 
         HelloWorld helloWorldObj = (HelloWorld) applicationContext.getBean("helloWorld");
-        helloWorldObj.setAge(22);
+       // helloWorldObj.setAge(22);
         System.out.println(helloWorldObj.getAge());
         //helloWorldObj.build();
 
