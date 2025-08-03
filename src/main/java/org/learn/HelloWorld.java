@@ -27,6 +27,14 @@ public class HelloWorld {
         this.age = age;
     }
 
+    public HelloRobert getHelloRobert() {
+        return helloRobert;
+    }
+
+    public void setHelloRobert(HelloRobert helloRobert) {
+        this.helloRobert = helloRobert;
+    }
+
     /**
     public long getSalary() {
         return salary;
