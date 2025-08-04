@@ -5,8 +5,8 @@
 
     <!-- bean definitions here -->
 
-    <bean id="helloWorld" class="org.learn.HelloWorld" autowire="byName">
-        <property name="helloMain" ref="helloBroon"> </property>
+    <bean id="helloWorld" class="org.learn.HelloWorld" autowire="byType">
+<!--        <property name="helloMain" ref="helloBroon"> </property>-->
 
 
 <!--        <property name="helloRobert" ref="helloRobert1"> </property>-->
@@ -20,7 +20,7 @@
 <!--        <constructor-arg index="1" name="salary" value="89000000" > </constructor-arg>-->
     </bean>
 
-    <bean id="helloBroon" class="org.learn.HelloBroon"> </bean>
+    <bean id="helloBroon" class="org.learn.HelloBroon" primary="true"> </bean>
 
     <bean id="helloRobert" class="org.learn.HelloRobert"> </bean>
 
