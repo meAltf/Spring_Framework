@@ -1,0 +1,24 @@
+* Dependency Injection (DI) – Basics:
+
+* Dependency Injection:
+- It is a design pattern used to remove hard-coded dependencies and make the system loosely coupled.
+- So that it's easier to test and maintain.
+- OR, It's a design pattern where dependencies are passed into a class rather than created inside it.
+
+* Spring & Dependency injection:
+- Spring implements Dependency injection through Inversion of control (IOC) container.
+- which manages objects/beans creation and wiring.
+
+* Way to do Dependency injection in spring:
+1. Setter Injection      | Inject dependencies by setter method
+2. Constructor Injection | Pass dependencies via constructor
+
+* Interview Q&A :
+
+1. How is DI implemented in Spring?
+- Spring uses XML configuration, annotations, or Java-based configuration to inject dependencies via constructors or setters.
+
+2. Why is DI useful?
+-  It promotes loose coupling, testability, and easier maintenance.
+
+
