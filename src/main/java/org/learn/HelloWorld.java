@@ -2,7 +2,9 @@ package org.learn;
 
 public class HelloWorld {
 
-    private HelloRobert helloRobert;
+    //private HelloRobert helloRobert;
+
+    private HelloMain helloMain;
 
     private int age;
 //    private long salary;
@@ -19,10 +21,12 @@ public class HelloWorld {
     }
      **/
 
+    /**
     public HelloWorld(HelloRobert helloRobert){
         this.helloRobert = helloRobert;
         System.out.println("HelloWorld from parameterized constructor Injection..");
     }
+     **/
 
     public int getAge() {
         return age;
@@ -32,12 +36,21 @@ public class HelloWorld {
         this.age = age;
     }
 
+    /**
     public HelloRobert getHelloRobert() {
         return helloRobert;
     }
 
     public void setHelloRobert(HelloRobert helloRobert) {
         this.helloRobert = helloRobert;
+    }
+**/
+    public HelloMain getHelloMain() {
+        return helloMain;
+    }
+
+    public void setHelloMain(HelloMain helloMain) {
+        this.helloMain = helloMain;
     }
 
     /**
@@ -50,8 +63,10 @@ public class HelloWorld {
     }
      **/
 
+
+
     public void build() {
         System.out.println("Working on spring framework project!");
-        helloRobert.compile();
+        helloMain.compile();
     }
 }

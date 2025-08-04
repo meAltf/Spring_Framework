@@ -5,11 +5,13 @@
 
     <!-- bean definitions here -->
 
-    <bean id="helloWorld" class="org.learn.HelloWorld">
+    <bean id="helloWorld" class="org.learn.HelloWorld" autowire="byName">
+        <property name="helloMain" ref="helloBroon"> </property>
+
 
 <!--        <property name="helloRobert" ref="helloRobert1"> </property>-->
 
-        <constructor-arg ref="helloRobert1" />
+<!--        <constructor-arg ref="helloRobert1" />-->
 
 <!--        <property name="age" value="20"> </property>-->
 <!--        <property name="salary" value="89000"> </property>-->
@@ -18,7 +20,9 @@
 <!--        <constructor-arg index="1" name="salary" value="89000000" > </constructor-arg>-->
     </bean>
 
-    <bean id="helloRobert1" class="org.learn.HelloRobert"> </bean>
+    <bean id="helloBroon" class="org.learn.HelloBroon"> </bean>
+
+    <bean id="helloRobert" class="org.learn.HelloRobert"> </bean>
 
     <!-- If you mention multiple times, it will create an object multiple times -->
 <!--    <bean id="helloRobert2" class="org.learn.HelloRobert"> </bean>-->

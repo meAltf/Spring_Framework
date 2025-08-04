@@ -1,6 +1,6 @@
 package org.learn;
 
-public class HelloRobert {
+public class HelloRobert implements HelloMain {
 
     public HelloRobert() {
         System.out.println("Hello Robert- Constructor");
