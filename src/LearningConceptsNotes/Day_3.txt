@@ -1,0 +1,31 @@
+* Types of Dependency Injection (Constructor vs Setter):
+
+* types of Dependency Injection (DI):
+1- Constructor Injection | Inject dependencies via constructor.
+2- Setter Injection | Inject dependencies via public setter methods.
+
+- Both are handled by Spring’s IoC container.
+
+* Real-World Use Case:
+1. Constructor Injection is ideal for core services like:
+    PaymentService(paymentGateway)
+2. Setter Injection is best for optional features like:
+    UserService.setLogger(Logger logger)
+
+* Interview Q&A :
+1. Which DI method is better?
+    - Depends on a use case.
+    - Constructor for mandatory dependencies.
+    - Setter for optional ones.
+
+2. Can you mix Constructor and Setter Injection?
+    - Yes, Spring allows hybrid injection – you can inject some via constructor and others via setters.
+
+3.  Is field injection recommended?
+    - It’s possible (with annotations), but not recommended for testability and maintainability.
+
+4. What happens if you declare a constructor with missing beans?
+    - Spring throws a BeanCreationException if a required constructor argument is missing.
+
+
+
