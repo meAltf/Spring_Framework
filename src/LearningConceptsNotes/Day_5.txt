@@ -1,0 +1,40 @@
+* Day 5: Bean Lifecycle in Spring
+
+- A Spring Bean is born, lives, and eventually dies inside the spring Ioc container.
+
+* Bean lifecycle stages:
+- Instantiation: Spring creates the bean instances (via constructor or factory method)
+- Populate properties: Dependencies are injected (via constructor, setter or field)
+- Bean name & factory aware(Optional): If your bean implemented special interfaces, spring informs it about its name or the factory
+- Initialization: Any custom init logic is run
+- Ready for use: The bean can now serve request
+- Destruction: When the container shuts down, destruction callbacks are called
+
+* Diagram:
+[Create Bean] --> [Set Properties] --> [Custom Init] --> [In Use] --> [Custom Destroy]
+
+* How to Hook into the Lifecycle:
+- Way to run code during init and destroy phases:-
+    - Implementing "InitializingBean" and "DisposalBean" interfaces
+    - Using @PostConstruct and @PreDestroy annotations
+    - Specifying "init-method" and "destroy-method" in XML or @Bean
+
+* Real-World Use Case
+- DataBaseConnection bean:
+    - In init phase: Open the DB connection pool
+    - In destroy phase: Close all connections
+- This ensures resources are managed correctly without any memory leaks.
+
+* Interview Q&A:
+
+1. How many phases does a Spring Bean lifecycle have?
+- Creation → Dependency Injection → Initialization → Ready for Use → Destruction.
+
+2. What is the difference between @PostConstruct and InitializingBean.afterPropertiesSet()?
+- @PostConstruct is standard Java, works with other frameworks; afterPropertiesSet() is Spring-specific.
+
+3. Can @PreDestroy fail to run?
+- Yes, if the JVM is killed abruptly or context.close() is not called in a non-web app.
+
+4. Which approach is preferred for init/destroy logic in modern Spring?
+- @PostConstruct and @PreDestroy annotations.
