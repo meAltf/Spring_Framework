@@ -1,0 +1,23 @@
+* Day 4: Spring Configuration – XML vs Annotations
+
+* Annotation based configuration :
+- @Component – Marks a class as a Spring-managed bean so that Spring’s IoC container can detect and create it automatically.
+
+- @Autowired – Injects a dependency automatically by type (can be used on constructors, setters, or fields).
+
+- @Configuration – Marks a class as a configuration class that defines one or more Spring beans.
+
+- @Bean – Used inside a @Configuration class to explicitly define and return a Spring bean.
+
+- @ComponentScan – Instructs Spring where to scan for components (@Component, @Service, @Repository, @Controller).
+
+*  Interview Q&A:
+1. What is the difference between XML and Annotation-based configuration in Spring?
+- XML config defines beans outside of code.
+- Annotation config defines beans inside code using annotations.
+
+2. Can you mix XML and Annotation config?
+- Yes, you can have XML files with <context:component-scan> and annotation-driven beans.
+
+3. What is @ComponentScan?
+- It tells Spring where to look for @Component, @Service, @Repository, and @Controller beans.
