@@ -1,0 +1,42 @@
+* Day 6: Bean Scopes & Autowiring
+
+- A Bean scope means how many instances of a Bean spring creates and how long they live inside the container.
+
+* Common Bean Scopes:
+- Singleton(default): Only one instance of the bean is created per Spring container.
+- Prototype: A new instance is created every time you request the Bean.
+- Request: One bean per HTTP request(Spring web only).
+- Session: One bean per HTTP session(spring web only).
+- Application: One bean per ServletContext(Spring web only).
+- WebSocket: One bean per WebSocket session.
+
+* Example: singleton vs prototype
+<bean id="singletonBean" class="com.example.MyBean" scope="singleton"/>
+<bean id="prototypeBean" class="com.example.MyBean" scope="prototype"/>
+
+* Autowiring in Spring:
+- Autowiring allows spring to automatically inject dependencies without any manually specifying them in XML or Java config.
+
+* Autowiring Modes (XML-based):
+- no(default): No autowiring, manual configuration required
+- byName: Matches bean id with property name
+- byType: Matches bean classType
+- constructor: Uses constructor-based injection
+
+* Annotation-based Autowiring:
+- @Autowired: Injects a bean automatically by type.
+- @Qualifier: Resolved ambiguity when multiple beans of the same type exists.
+- @Primary: Marks a bean as the default when multiple candidates exist.
+
+* Interview Q&A:
+
+1. What is the difference between @Autowired and @Qualifier?
+- @Autowired injects by type.
+- @Qualifier specifies which bean to inject when multiple candidates exist.
+
+2. Can prototype beans be injected into singleton beans?
+- Yes, but the prototype is created only once during singleton’s initialization unless explicitly retrieved each time.
+
+3. What’s the difference between @Primary and @Qualifier?
+- @Primary sets a default bean.
+- while @Qualifier explicitly chooses one bean for injection.
